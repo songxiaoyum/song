@@ -1,0 +1,8 @@
+Python 2.7.14 (v2.7.14:84471935ed, Sep 16 2017, 20:25:58) [MSC v.1500 64 bit (AMD64)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> y='123@qq.comaaa@163.combbb@126.comasdfasfs33333@adfcom'
+>>> import re
+>>> re.findall('\w+@(qq|163|126).com', y)
+['qq', '163', '126']
+>>> re.findall('\w+@(?:qq|163|126).com', y)
+['123@qq.com', 'aaa@163.com', 'bbb@126.com']
